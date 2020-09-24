@@ -35,7 +35,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./photo/character/Acolyte.png" alt="">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal();currentSlide(1)">
 							<h3>Click to Enlarge</h3>
 							<p>Acolyte Class</p>
 						</div>
@@ -47,7 +47,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./photo/character/Magician.png" alt="">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal();currentSlide(2)">
 							<h3>Click to Enlarge</h3>
 							<p>Magician Class</p>
 						</div>
@@ -59,7 +59,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./photo/character/Swordsman.png" alt="">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal();currentSlide(3)">
 							<h3>Click to Enlarge</h3>
 							<p>Swordsman Class</p>
 						</div>
@@ -71,7 +71,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./photo/character/Archer.png" alt="">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal();currentSlide(4)">
 							<h3>Click to Enlarge</h3>
 							<p>Archer Class</p>
 						</div>
@@ -83,7 +83,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./photo/character/Thief.png" alt="">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal();currentSlide(5)">
 							<h3>Click to Enlarge</h3>
 							<p>Thief Class</p>
 						</div>
@@ -95,17 +95,87 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./photo/character/Merchant.png" alt="">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal();currentSlide(6)">
 							<h3>Click to Enlarge</h3>
 							<p>Merchant Class</p>
 						</div>
 					</div>
 				</div>
 				<!-- END PHOTO CONTAINER 6-->
+				<!-- The Modal/Lightbox -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
 				
+					<div class="mySlides">
+						<div class="numbertext">1 / 6</div>
+						<img src="./Photo/Character/Acolyte_wide.png" >
+					</div>
+				
+					<div class="mySlides">
+						<div class="numbertext">2 / 6</div>
+						<img src="./Photo/Character/Magician_wide.png">
+					</div>
+				
+					<div class="mySlides">
+						<div class="numbertext">3 / 6</div>
+						<img src="./Photo/Character/Swordsman_wide.png">
+					</div>
+				
+					<div class="mySlides">
+						<div class="numbertext">4 / 6</div>
+						<img src="./Photo/Character/Archer_wide.png">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">5 / 6</div>
+						<img src="./Photo/Character/Thief_wide.png">
+					</div>
+					
+					<div class="mySlides">
+						<div class="numbertext">6 / 6</div>
+						<img src="./Photo/Character/Merchant_wide.png">
+					</div>
+
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+				
+					<!-- Thumbnail image controls -->
+					<div class="column">
+						<img class="demo" src="./Photo/Character/Acolyte_small.png" onclick="currentSlide(1)" alt="Acolyte">
+					</div>
+				
+					<div class="column">
+						<img class="demo" src="./Photo/Character/Magician_small.png" onclick="currentSlide(2)" alt="Magician">
+					</div>
+				
+					<div class="column">
+						<img class="demo" src="./Photo/Character/Swordsman_small.png" onclick="currentSlide(3)" alt="Swordsman">
+					</div>
+				
+					<div class="column">
+						<img class="demo" src="./Photo/Character/Archer_small.png" onclick="currentSlide(4)" alt="Archer">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./Photo/Character/Thief_small.png" onclick="currentSlide(5)" alt="Thief">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./Photo/Character/Merchant_small.png" onclick="currentSlide(6)" alt="Merchant">
+					</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
+
 	<!-- END GALLERY -->
 	
 	<!-- VIDEO -->
@@ -118,11 +188,8 @@
 						width="600" height="450" 
 						src="https://www.youtube.com/embed/rxeRPXD3JhY" 
 						frameborder="0"
-						allow="accelerometer; 
-						autoplay; 
-						encrypted-media; 
-						gyroscope; picture-in-picture" 
-						allowfullscreen>
+
+						>
 						Trailer Video
 					</iframe>
 				</div>
@@ -185,7 +252,7 @@
 		www.ragnarok.com &nbsp;|&nbsp; &copy; 2020
 	</div>
 	<!-- END FOOTER-->
-	
+	<script src="JavaScript/One_page_website.js"></script>
 	</body>
 
 
