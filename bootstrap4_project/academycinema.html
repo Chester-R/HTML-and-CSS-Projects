@@ -66,13 +66,13 @@
                 <h3>Now Playing</h3>
                 <ul class="list-group">
                     <li class="list-group-item">
-                      <a class="nav-link" href="./img/kongskullisland.jpg">Kong Skull Island</a>
+                      <a class="nav-link" href="#card1">Kong Skull Island</a>
                     </li>
                     <li class="list-group-item">
-                      <a class="nav-link" href="./img/ghostintheshell.jpg">Ghost in the Shell</a>
+                      <a class="nav-link" href="#card2">Ghost in the Shell</a>
                     </li>
                     <li class="list-group-item">
-                      <a class="nav-link" href="./img/beautyandthebeast.jpg">Beauty and the Beast</a>
+                      <a class="nav-link" href="#card3">Beauty and the Beast</a>
                     </li>
                 </ul>
               </div>
@@ -84,7 +84,7 @@
           <div class="card-group" id="showtime">
             <h1>Showtimes:</h1>
             <div class="row">
-              <div class="col-sm">
+              <div class="col-sm" id="card1">
                 <div class="card">
                   <img src="./img/kongskullisland.jpg" class="card-img-top" alt="Card image cap">
                   <div class="card-block">
@@ -101,7 +101,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm">
+              <div class="col-sm" id="card2">
                 <div class="card">
                   <img src="./img/ghostintheshell.jpg" class="card-img-top" alt="Card image cap">
                   <div class="card-block">
@@ -118,7 +118,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm">
+              <div class="col-sm" id="card3">
                 <div class="card">
                   <img src="./img/beautyandthebeast.jpg" class="card-img-top" alt="Card image cap">
                   <div class="card-block">
@@ -142,16 +142,75 @@
           
           <!--END SHOWTIMES-->
 
+          <!-- jumbotron heading-->
+          <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+            <div class="container">
+              <h1 class="display-4 hidden-sm-down" style="color:#fff;font-family: roboto; font-weight: 900;text-transform: uppercase;">
+                Movie Deals
+              </h1>
+              <p class="lead">Check out our monthly deals!</p>
+              <!--Movie Deals-->
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register">See our montly movie deals</button>
+              <!--end Movie Deals-->
+            </div>
+          </div>
+          <!-- end jumbotron heading-->
+          <!--Sign up form-->
           <div class="text-center" id="deals">
              <form>
                 <h1 class="text-primary my-5">Sign up for Movie Club Rewards!</h1>
                 <div class="form-group ">
-                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">  
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit your email to receive great movie rewards!!">
+                  Sign Up
+                </button>
               </form>
           </div>
-          
+          <!--end sign up form-->
+          <!--form modal-->
+          <div class="modal" tabindex="-1" id="register">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Register to receive movie deals</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <fieldset class="form-group">
+                      <label for="firstname">First Name:</label>
+                      <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <label for="lastname">Last Name:</label>
+                      <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="text" class="form-control" id="email" placeholder="Email">
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <label for="password">Password:</label>
+                      <input type="text" class="form-control" id="password" placeholder="Password">
+                    </fieldset>
+                  </form>
+
+
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end form modal-->
+
+          <!--footer-->
           <div class="container my-5">
               <ul class="nav nav-inline">
                   <li class="nav-item">
@@ -168,17 +227,20 @@
                   </li>
               </ul>
           </div>
-
-
-
-
+          <!--end footer-->
 
     </div>
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script>
+      $('.popover-dismiss').popover({
+        trigger: 'focus'
+      })
+
+    </script>
   </body>
 </html>
